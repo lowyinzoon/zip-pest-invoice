@@ -543,7 +543,7 @@ select.fi{
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
   body,html{height:auto!important;overflow:visible!important;background:#fff!important}
   #app{height:auto!important;overflow:visible!important;max-width:100%!important}
-  .topbar,.bottom-nav,.action-grid,.status-banner,.fab,.toast,
+  .topbar,.bottom-nav,.action-grid,.status-banner,.fab,.toast,.modal-overlay,
   #page-dashboard,#page-new,#page-settings{display:none!important}
   .scroll-area{overflow:visible!important;padding-bottom:0!important;height:auto!important}
   #page-detail{display:block!important;padding:0!important}
@@ -946,7 +946,7 @@ select.fi{
         <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px">Save invoice as PDF</div>
         <div style="font-size:11px;color:var(--text-soft)">Tap below → select "Save as PDF" in print dialog</div>
       </div>
-      <button onclick="window.print()" style="background:var(--purple);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:12px;font-weight:700;cursor:pointer;flex-shrink:0">
+      <button onclick="document.getElementById('modal-wa').classList.remove('open');setTimeout(()=>window.print(),300)" style="background:var(--purple);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:12px;font-weight:700;cursor:pointer;flex-shrink:0">
         Save PDF
       </button>
     </div>
